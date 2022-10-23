@@ -70,7 +70,26 @@ topicon.addEventListener("click", () => {
 });
 
 
+
 // functions call
 addSections(6);
 createMenuItems();
+
+
+items = document.getElementsByClassName("menu__link");
+
+for(item of items){
+  item.addEventListener("click",scrollBehavior)
+}
+function scrollBehavior(e){
+    e.preventDefault();
+    target = this.getAttribute("href");
+    document.querySelector(target).scrollIntoView({
+      behavior:"smooth",
+    });
+}
+
+
+
+
 
