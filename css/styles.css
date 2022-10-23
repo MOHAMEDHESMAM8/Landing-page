@@ -8,6 +8,10 @@
  *
 */
 
+html{
+  scroll-behavior: smooth;
+}
+
 
 /* ---- Base Rules ---- */
 body {
@@ -246,7 +250,7 @@ section.active .landing__container::after {
 /* top icon style */
 #top {
   border-radius: 100%;
-  background-color: #e91e63;
+  background-color: #0e6ec2;
   width: 60px;
   height: 60px;
   text-align: center;
