@@ -2,7 +2,7 @@
 
 //create menu bar 
 //get all sections from the html file and add it by id to the navbar__list
-navMenu = document.getElementById("navbar__list");
+const navMenu = document.getElementById("navbar__list");
 
 function createMenuItems () {
   navMenu.innerHTML = "";
@@ -13,32 +13,11 @@ function createMenuItems () {
     const listItem = `<li><a href="#${sectionId}" class="menu__link" data-active="${sectionId}">${sectionName}</a></li>`;
     navMenu.innerHTML += listItem ;
   }
-  
 };
 
 
-//function to add sections dynamiclly 
-function addSections (num) {
-
-  for (var next = 1; next < num; next++){
-
-    var section = `
-    <section id="section${next}" data-nav="Section ${next}">
-      <div class="landing__container">
-        <h2>Section ${next}</h2>
-
-        <h3>Hello, this is the body for section ${next} .</h3>
-      
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid fuga voluptatem quo perspiciatis atque totam optio earum quasi ullam laudantium, dicta pariatur maiores animi aut perferendis reprehenderit, nam similique dolorem.</p>
-        <p>doloremque id culpa asperiores voluptas pariatur quasi aspernatur omnis corrupti. Quas in dolore numquam accusantium eos, voluptates magni blanditiis tempore doloremque harum ex nostrum distinctio neque. Iure culpa, dicta placeat quam dolor fugit, blanditiis assumenda neque aliquid quos, quibusdam consequatur. Porro magni fugit iste corrupti dicta esse quibusdam animi doloremque libero eum, cumque perspiciatis hic aspernatur iure autem necessitatibus et enim architecto illo atque doloribus asperiores id totam! Id maxime velit a earum harum consequatur minus similique, perspiciatis mollitia molestiae illum eligendi magnam quis!</p>
-      
-        </div>
-    </section>`;
-    document.querySelector("main").insertAdjacentHTML("beforeend", section);
-
-    }
-};
-
+// function call
+createMenuItems();
 
 
 // I use getBoundingClientRect to get the postion of the section & test if it the current section ot not 
@@ -71,12 +50,7 @@ topicon.addEventListener("click", () => {
 
 
 
-// functions call
-addSections(6);
-createMenuItems();
-
-
-items = document.getElementsByClassName("menu__link");
+const items = document.getElementsByClassName("menu__link");
 
 for(item of items){
   item.addEventListener("click",scrollBehavior)
