@@ -12,7 +12,7 @@ Using Javascript to create dynamic landing page.
 2. CSS
 3. JavaScript
 
-## How to use this project ?
+## Installation ?
 1. open git then write 
 > git clone https://github.com/MOHAMEDHESMAM8Landing-page.git
 
